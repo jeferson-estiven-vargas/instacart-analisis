@@ -4,5 +4,7 @@ __pycache__/
 data/*.csv
 CSV/
 Untitled.ipynb
-CSV/
-Untitled.ipynb
+
+# Datos locales: no versionar CSV en data/ ni en sus subcarpetas
+data/**/*.csv
+
