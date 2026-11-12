@@ -11,13 +11,13 @@ Aprendiz: jeferson estiven vargas
 |---|---|
 | `notebooks/00_entorno.ipynb` | Comprobación del entorno (pandas) y función `franja` |
 | `notebooks/01_exploracion_instacart.ipynb` | **Entregable EV04**: los 6 momentos de la actividad |
-| `data/` | CSV de Instacart (no se versionan; solo existe `.gitkeep`) |
+| `data/raw/` | CSV de Instacart (no se versionan; solo existe `data/raw/.gitkeep`) |
 | `requirements.txt` | Dependencias del entorno (generado con `pip freeze`) |
 
 ## Datos
 
-Los CSV usan `;` como separador y **no se suben al repositorio** (`data/*.csv` está en `.gitignore`).
-Colócalos en `data/` con estos nombres:
+Los CSV usan `;` como separador y **no se suben al repositorio** (`data/**/*.csv` está en `.gitignore`).
+Colócalos en `data/raw/` con estos nombres:
 
 `instacart_orders.csv` · `products.csv` · `aisles.csv` · `departments.csv` · `order_products.csv`
 
@@ -62,7 +62,7 @@ En macOS/Linux la activación es `source .venv/bin/activate`.
 
 ### Cómo reproducir el diagnóstico
 
-1. Copiar los 5 CSV de Instacart en la carpeta `data/` (no se suben a GitHub).
+1. Copiar los 5 CSV de Instacart en la carpeta `data/raw/` (no se suben a GitHub).
 2. Crear el entorno e instalar las dependencias desde Git Bash:
 
    ```bash
