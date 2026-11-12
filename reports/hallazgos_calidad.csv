@@ -1,0 +1,11 @@
+hallazgo,dimension,dataset,columna,descripcion,filas_afectadas,porcentaje,impacto,accion_propuesta
+1,Completitud,instacart_orders,days_since_prior_order,Valores faltantes (NaN),28819,6.02,Alto,No eliminar: el faltante corresponde al primer pedido de cada cliente. Convertir a Int64 o crear una columna es_primer_pedido.
+2,Validez (tipo),instacart_orders,days_since_prior_order,Es decimal (float64) y debería ser entero,28819,6.02,Alto,"Convertir con astype('Int64'), que admite faltantes, después de tratar los NaN."
+3,Consistencia (texto),departments,department,"Valores de relleno (missing, unknown…)",1,4.76,Medio,Tratarlos como faltantes o como una categoría explícita 'Unknown'.
+4,Completitud,products,product_name,Valores faltantes (NaN),1258,2.53,Medio,Reemplazar por la categoría 'Unknown' para no perder las filas.
+5,Consistencia (texto),aisles,aisle,"Valores de relleno (missing, unknown…)",1,0.75,Bajo,Tratarlos como faltantes o como una categoría explícita 'Unknown'.
+6,Consistencia (texto),products,product_name,Valores que solo cambian en mayúsculas,104,0.21,Bajo,Normalizar con str.strip().str.lower() antes de agrupar.
+7,Completitud,order_products,add_to_cart_order,Valores faltantes (NaN),836,0.02,Bajo,Revisar la causa; excluir esas filas en los cálculos que usen la columna o imputar con criterio justificado.
+8,Validez (tipo),order_products,add_to_cart_order,Es decimal (float64) y debería ser entero,836,0.02,Bajo,"Convertir con astype('Int64'), que admite faltantes, después de tratar los NaN."
+9,Consistencia (texto),products,product_name,Espacios al inicio o al final,4,0.01,Bajo,Limpiar con str.strip().
+10,Unicidad,instacart_orders,(fila completa),Filas idénticas repetidas,15,0.0,Bajo,Eliminar con drop_duplicates() conservando la primera aparición.
