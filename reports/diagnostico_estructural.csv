@@ -1,0 +1,6 @@
+dataset,filas,columnas,columnas_numericas,columnas_texto,memoria_MB
+aisles,134,2,1,1,0.01
+departments,21,2,1,1,0.0
+instacart_orders,478967,6,6,0,21.93
+order_products,4545007,4,4,0,138.7
+products,49694,4,3,1,4.87
